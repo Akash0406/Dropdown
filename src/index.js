@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = "Select"
+    this.state = { value: "Select" };
+
   }
 
   handleSubmit(event) {
@@ -21,7 +22,8 @@ class App extends React.Component {
         <label style={{ margin: '20px' }}>
           Should you use a Dropdown
         </label>
-        <select style={{ width: '200px', marginLeft: '25%', height: '30px', borderRadius: '20px', marginBottom: '30px', textAlign: 'center' }} value={this.state.value} onChange={this.handleChange}>
+        <select defaultValue={"Select"} style={{ width: '200px', marginLeft: '25%', height: '30px', borderRadius: '20px', marginBottom: '30px', textAlign: 'center' }} value={this.state.value} onChange={this.handleChange}>
+          <option value="Select">Select</option>
           <option value="YES">YES</option>
           <option value="NO">NO</option>
 
